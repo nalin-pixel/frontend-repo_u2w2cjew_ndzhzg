@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Page from '../components/Page'
 
 const categories = ['Security','Privacy','Tech','Guides']
 const posts = Array.from({length:8}).map((_,i)=> ({
@@ -14,7 +15,7 @@ export default function Blog(){
 
   return (
     <div className="bg-white text-slate-900">
-      <main className="pt-24">
+      <Page>
         <section className="max-w-7xl mx-auto px-6">
           <h1 className="text-4xl sm:text-6xl font-extrabold">Insights</h1>
           <div className="mt-6 flex flex-wrap gap-2">
@@ -36,7 +37,7 @@ export default function Blog(){
             ))}
           </div>
         </section>
-      </main>
+      </Page>
     </div>
   )
 }

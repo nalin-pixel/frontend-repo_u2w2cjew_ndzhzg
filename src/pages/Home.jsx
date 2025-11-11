@@ -1,3 +1,4 @@
+import Page from '../components/Page'
 import Hero from '../components/Hero'
 import FeatureCards from '../components/FeatureCards'
 import Comparison from '../components/Comparison'
@@ -9,7 +10,7 @@ import FinalCTA from '../components/FinalCTA'
 export default function Home(){
   return (
     <div className="bg-white text-slate-900">
-      <main>
+      <Page>
         <Hero />
         <FeatureCards />
         <Comparison />
@@ -17,7 +18,7 @@ export default function Home(){
         <SpeedTest />
         <Testimonials />
         <FinalCTA />
-      </main>
+      </Page>
     </div>
   )
 }

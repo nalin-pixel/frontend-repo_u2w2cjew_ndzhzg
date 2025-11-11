@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Page from '../components/Page'
 
 const timeline = [
   { year: '2022', text: 'Vision sparks: privacy without compromise.' },
@@ -10,7 +11,7 @@ const timeline = [
 export default function About(){
   return (
     <div className="bg-white text-slate-900">
-      <main className="pt-24">
+      <Page>
         <section className="max-w-7xl mx-auto px-6">
           <motion.h1 initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} className="text-4xl sm:text-6xl font-extrabold">We believe privacy is not a privilege — it’s your digital birthright.</motion.h1>
           <p className="mt-4 text-slate-600 max-w-3xl">Our mission is simple: empower you with speed, privacy, and freedom. We build technology that fades into the background and protects what matters.</p>
@@ -31,7 +32,7 @@ export default function About(){
             </div>
           </div>
         </section>
-      </main>
+      </Page>
     </div>
   )
 }

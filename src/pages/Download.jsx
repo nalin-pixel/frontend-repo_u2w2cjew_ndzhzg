@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Page from '../components/Page'
 
 const platforms = [
   { key: 'windows', name: 'Windows' },
@@ -23,7 +24,7 @@ export default function Download(){
   useEffect(()=>{ setActive(detectOS()) }, [])
   return (
     <div className="bg-white text-slate-900">
-      <main className="pt-24">
+      <Page>
         <section className="max-w-7xl mx-auto px-6">
           <h1 className="text-4xl sm:text-6xl font-extrabold">Download Cryptora</h1>
           <p className="mt-2 text-slate-600">Fast setup. One-tap connect.</p>
@@ -43,7 +44,7 @@ export default function Download(){
             </div>
           </div>
         </section>
-      </main>
+      </Page>
     </div>
   )
 }

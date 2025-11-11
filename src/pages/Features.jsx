@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Page from '../components/Page'
 import { ShieldCheck, Lock, Cpu, Waves, Globe2, MonitorSmartphone } from 'lucide-react'
 
 const items = [
@@ -13,7 +14,7 @@ const items = [
 export default function Features(){
   return (
     <div className="bg-white text-slate-900">
-      <main className="pt-24">
+      <Page>
         <section className="max-w-7xl mx-auto px-6">
           <motion.h1 initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} className="text-4xl sm:text-6xl font-extrabold">Built for Speed, Privacy, and Freedom</motion.h1>
           <p className="mt-4 text-slate-600">Engineered for the Next Internet.</p>
@@ -43,7 +44,7 @@ export default function Features(){
             </motion.div>
           </div>
         </section>
-      </main>
+      </Page>
     </div>
   )
 }

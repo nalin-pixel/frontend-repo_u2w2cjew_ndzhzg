@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Page from '../components/Page'
 
 const plans = [
   { name: 'Basic', priceM: 9, priceY: 69, features: ['Unlimited bandwidth','AES-256 + WireGuard','1 device'], highlight: false },
@@ -11,7 +12,7 @@ export default function Pricing(){
 
   return (
     <div className="bg-white text-slate-900">
-      <main className="pt-24">
+      <Page>
         <section className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
             <h1 className="text-4xl sm:text-6xl font-extrabold">Choose Your Plan</h1>
@@ -36,7 +37,7 @@ export default function Pricing(){
             ))}
           </div>
         </section>
-      </main>
+      </Page>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Page from '../components/Page'
 
 const faqs = [
   { q: 'Do you keep logs?', a: 'No. Our infrastructure is designed and audited to be incapable of storing activity or connection logs.' },
@@ -10,7 +11,7 @@ export default function Support(){
   const [open, setOpen] = useState(0)
   return (
     <div className="bg-white text-slate-900">
-      <main className="pt-24">
+      <Page>
         <section className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl sm:text-6xl font-extrabold">Support</h1>
           <p className="mt-2 text-slate-600">We’re here to help.</p>
@@ -37,7 +38,7 @@ export default function Support(){
             </form>
           </div>
         </section>
-      </main>
+      </Page>
     </div>
   )
 }
