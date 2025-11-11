@@ -13,12 +13,12 @@ export default function Comparison() {
   const current = competitors[index]
 
   return (
-    <section className="relative py-24 bg-black text-white">
+    <section className="relative py-24 bg-white text-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-8">
           <div>
-            <h2 className="text-3xl sm:text-5xl font-bold">Why Cryptora Beats the Rest</h2>
-            <p className="mt-3 text-white/70">Compare speed, privacy, and transparency.</p>
+            <h2 className="text-3xl sm:text-5xl font-bold">Why Cryptora Leads</h2>
+            <p className="mt-3 text-slate-600">Compare speed, privacy, and transparency.</p>
           </div>
           <input
             type="range"
@@ -26,14 +26,14 @@ export default function Comparison() {
             max={competitors.length - 1}
             value={index}
             onChange={(e) => setIndex(parseInt(e.target.value))}
-            className="w-full md:w-80 accent-cyan-400"
+            className="w-full md:w-80 accent-sky-500"
           />
         </div>
 
         <div className="grid md:grid-cols-4 gap-6">
           {competitors.map((c, i) => (
-            <motion.div key={c.name} initial={{opacity:0, y: 10}} whileInView={{opacity:1, y:0}} viewport={{once:true}} className={`rounded-2xl p-6 border ${i===index ? 'bg-white/10 border-cyan-400/40' : 'bg-white/5 border-white/10'}`}>
-              <div className="text-sm text-white/60">Provider</div>
+            <motion.div key={c.name} initial={{opacity:0, y: 10}} whileInView={{opacity:1, y:0}} viewport={{once:true}} className={`rounded-2xl p-6 border ${i===index ? 'bg-white shadow-lg border-sky-300/70' : 'bg-white/60 backdrop-blur border-slate-200'} transition-colors`}>
+              <div className="text-sm text-slate-500">Provider</div>
               <div className="text-2xl font-semibold mt-1">{c.name}</div>
               <div className="mt-4 space-y-2">
                 <Bar label="Speed" value={c.speed} active={i===index} />
@@ -52,11 +52,11 @@ function Bar({ label, value, active }) {
   return (
     <div>
       <div className="flex justify-between text-sm">
-        <span className="text-white/70">{label}</span>
-        <span className="text-white/90">{value}%</span>
+        <span className="text-slate-600">{label}</span>
+        <span className="text-slate-900">{value}%</span>
       </div>
-      <div className="mt-1 h-2 w-full rounded-full bg-white/10 overflow-hidden">
-        <div className={`h-full rounded-full ${active ? 'bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-600' : 'bg-white/20'}`} style={{ width: `${value}%`}} />
+      <div className="mt-1 h-2 w-full rounded-full bg-slate-200 overflow-hidden">
+        <div className={`h-full rounded-full ${active ? 'bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-600' : 'bg-slate-300'}`} style={{ width: `${value}%`}} />
       </div>
     </div>
   )

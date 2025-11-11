@@ -11,32 +11,32 @@ const faqs = [
 export default function Support(){
   const [open, setOpen] = useState(0)
   return (
-    <div className="bg-black text-white">
+    <div className="bg-white text-slate-900">
       <Navbar />
       <main className="pt-24">
         <section className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl sm:text-6xl font-extrabold">Support</h1>
-          <p className="mt-2 text-white/70">We’re here to help.</p>
+          <p className="mt-2 text-slate-600">We’re here to help.</p>
 
-          <div className="mt-8 divide-y divide-white/10 border border-white/10 rounded-2xl">
+          <div className="mt-8 divide-y divide-slate-200 border border-slate-200 rounded-2xl bg-white/70 backdrop-blur">
             {faqs.map((f,i)=> (
               <div key={i}>
                 <button onClick={()=>setOpen(open===i? -1:i)} className="w-full flex items-center justify-between px-6 py-4">
                   <span className="text-lg font-semibold text-left">{f.q}</span>
-                  <span className="text-cyan-300">{open===i? '−' : '+'}</span>
+                  <span className="text-sky-700">{open===i? '−' : '+'}</span>
                 </button>
-                {open===i && <div className="px-6 pb-4 text-white/70">{f.a}</div>}
+                {open===i && <div className="px-6 pb-4 text-slate-600">{f.a}</div>}
               </div>
             ))}
           </div>
 
-          <div className="mt-10 rounded-2xl p-6 bg-white/5 border border-white/10">
+          <div className="mt-10 rounded-2xl p-6 bg-white/70 backdrop-blur border border-slate-200">
             <div className="text-xl font-semibold">Contact us</div>
             <form className="mt-4 grid sm:grid-cols-2 gap-3">
-              <input required placeholder="Name" className="bg-white/5 border border-white/10 rounded-lg px-3 py-2"/>
-              <input required type="email" placeholder="Email" className="bg-white/5 border border-white/10 rounded-lg px-3 py-2"/>
-              <textarea required placeholder="How can we help?" className="sm:col-span-2 bg-white/5 border border-white/10 rounded-lg px-3 py-2 h-28"/>
-              <button className="sm:col-span-2 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600">Send</button>
+              <input required placeholder="Name" className="bg-white border border-slate-200 rounded-lg px-3 py-2"/>
+              <input required type="email" placeholder="Email" className="bg-white border border-slate-200 rounded-lg px-3 py-2"/>
+              <textarea required placeholder="How can we help?" className="sm:col-span-2 bg-white border border-slate-200 rounded-lg px-3 py-2 h-28"/>
+              <button className="sm:col-span-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-600 text-white">Send</button>
             </form>
           </div>
         </section>
