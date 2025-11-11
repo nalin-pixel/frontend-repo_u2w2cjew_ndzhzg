@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { useEffect, useState } from 'react'
 
 const platforms = [
@@ -25,15 +23,14 @@ export default function Download(){
   useEffect(()=>{ setActive(detectOS()) }, [])
   return (
     <div className="bg-white text-slate-900">
-      <Navbar />
       <main className="pt-24">
         <section className="max-w-7xl mx-auto px-6">
           <h1 className="text-4xl sm:text-6xl font-extrabold">Download Cryptora</h1>
           <p className="mt-2 text-slate-600">Fast setup. One-tap connect.</p>
 
-          <div className="mt-8 flex gap-2 overflow-x-auto border-b border-slate-200">
+          <div className="mt-8 flex gap-2 overflow-x-auto border-b border-slate-2 00">
             {platforms.map(p => (
-              <button key={p.key} onClick={()=>setActive(p.key)} className={`px-4 py-2 rounded-t-lg ${active===p.key ? 'bg-white text-slate-900 border-x border-t border-slate-200' : 'text-slate-600 hover:text-slate-900'}`}>{p.name}</button>
+              <button key={p.key} onClick={()=>setActive(p.key)} className={`${active===p.key ? 'bg-white text-slate-900 border-x border-t border-slate-200' : 'text-slate-600 hover:text-slate-900'} px-4 py-2 rounded-t-lg`}>{p.name}</button>
             ))}
           </div>
 
@@ -47,7 +44,6 @@ export default function Download(){
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

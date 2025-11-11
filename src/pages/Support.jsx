@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { useState } from 'react'
 
 const faqs = [
@@ -12,7 +10,6 @@ export default function Support(){
   const [open, setOpen] = useState(0)
   return (
     <div className="bg-white text-slate-900">
-      <Navbar />
       <main className="pt-24">
         <section className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl sm:text-6xl font-extrabold">Support</h1>
@@ -41,7 +38,6 @@ export default function Support(){
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

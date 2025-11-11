@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 import { ShieldCheck, Lock, Cpu, Waves, Globe2, MonitorSmartphone } from 'lucide-react'
 
@@ -15,7 +13,6 @@ const items = [
 export default function Features(){
   return (
     <div className="bg-white text-slate-900">
-      <Navbar />
       <main className="pt-24">
         <section className="max-w-7xl mx-auto px-6">
           <motion.h1 initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} className="text-4xl sm:text-6xl font-extrabold">Built for Speed, Privacy, and Freedom</motion.h1>
@@ -47,7 +44,6 @@ export default function Features(){
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

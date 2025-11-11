@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { useState } from 'react'
 
 const plans = [
@@ -13,7 +11,6 @@ export default function Pricing(){
 
   return (
     <div className="bg-white text-slate-900">
-      <Navbar />
       <main className="pt-24">
         <section className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between">
@@ -27,7 +24,7 @@ export default function Pricing(){
 
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {plans.map(p => (
-              <div key={p.name} className={`rounded-2xl p-6 border ${p.highlight ? 'bg-white shadow-lg border-sky-300/70' : 'bg-white/70 backdrop-blur border-slate-200'}`}>
+              <div key={p.name} className={`${p.highlight ? 'bg-white shadow-lg border-sky-300/70' : 'bg-white/70 backdrop-blur border-slate-200'} rounded-2xl p-6 border`}>
                 <div className="text-sm text-slate-500">{p.name}</div>
                 <div className="mt-2 text-5xl font-bold tracking-tight">${yearly ? p.priceY : p.priceM}<span className="text-lg text-slate-500 ml-1">{yearly ? '/yr' : '/mo'}</span></div>
                 <ul className="mt-6 space-y-2 text-slate-700">
@@ -40,7 +37,6 @@ export default function Pricing(){
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

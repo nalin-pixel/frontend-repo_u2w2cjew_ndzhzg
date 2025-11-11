@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { useState } from 'react'
 
 const categories = ['Security','Privacy','Tech','Guides']
@@ -16,7 +14,6 @@ export default function Blog(){
 
   return (
     <div className="bg-white text-slate-900">
-      <Navbar />
       <main className="pt-24">
         <section className="max-w-7xl mx-auto px-6">
           <h1 className="text-4xl sm:text-6xl font-extrabold">Insights</h1>
@@ -40,7 +37,6 @@ export default function Blog(){
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

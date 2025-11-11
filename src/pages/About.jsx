@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 
 const timeline = [
@@ -12,7 +10,6 @@ const timeline = [
 export default function About(){
   return (
     <div className="bg-white text-slate-900">
-      <Navbar />
       <main className="pt-24">
         <section className="max-w-7xl mx-auto px-6">
           <motion.h1 initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} className="text-4xl sm:text-6xl font-extrabold">We believe privacy is not a privilege — it’s your digital birthright.</motion.h1>
@@ -20,7 +17,7 @@ export default function About(){
 
           <div className="mt-16 grid lg:grid-cols-3 gap-8 items-start">
             <div className="lg:col-span-2 space-y-6">
-              {timeline.map((t,i)=> (
+              {timeline.map((t)=> (
                 <div key={t.year} className="rounded-2xl p-6 bg-white/70 backdrop-blur border border-slate-200">
                   <div className="text-sky-700">{t.year}</div>
                   <div className="text-xl font-semibold mt-1">{t.text}</div>
@@ -35,7 +32,6 @@ export default function About(){
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }
